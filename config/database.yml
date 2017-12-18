@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  url: <%= ENV['MY_APP_DATABASE_URL'] || "postgres://postgres@db/cdsi_example_dev" %>
+
+test:
+  <<: *default
+  url: "postgres://postgres@localhost/cdsi_example_test"
+
+production:
+  <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5

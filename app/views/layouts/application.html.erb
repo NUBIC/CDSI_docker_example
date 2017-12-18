@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CDSIExample</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <% if user_signed_in? %>
+      <h1><%= link_to raw("Logout #{current_user.netid}"), destroy_user_session_path, :method => :delete %></h1>
+    <% else %>
+      <h1><%= link_to 'Login', new_user_session_path %></h1>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+dn: cn=nu,cn=schema,cn=config
+objectClass: olcSchemaConfig
+cn: nu
+olcAttributeTypes: {0}( 9.9.01234567654321.1.1 NAME 'nuIdTag' SUP uid )
+olcAttributeTypes: {1}( 9.9.01234567654321.1.2 NAME 'nuMiddleName' SUP name )
+olcAttributeTypes: {2}( 9.9.01234567654321.1.3 NAME 'nuAllGivenNameSearch' SUP
+  name )
+olcAttributeTypes: {3}( 9.9.01234567654321.1.4 NAME 'nuAllSnSearch' SUP name )
+olcObjectClasses: {0}( 9.9.01234567654321.2.1 NAME 'nuperson' DESC 'NU Person'
+  SUP inetOrgPerson STRUCTURAL MAY ( postalAddress $ title $ nuIdTag $ mail $ 
+ employeeNumber $ uidNumber $ uid $ givenName $ nuMiddleName $ displayName $ n
+ uAllGivenNameSearch $ nuAllSnSearch ) )

@@ -1,0 +1,9 @@
+# extended LDIF
+#
+# LDAPv3
+#
+dn: ou=People,dc=northwestern,dc=edu
+ou: People
+objectClass: top
+objectClass: organizationalUnit
+description: Parent object of all accounts

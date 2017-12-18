@@ -1,0 +1,35 @@
+version: '3'
+services:
+  db:
+    image: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - ".data/etc_postgresql:/etc/postgresql"
+      - ".data/logs:/var/log/postgresql"
+      - ".data/lib_postgresql:/var/lib/postgresql"
+  web:
+    build: .
+    command: bash -c "rm -f tmp/pids/server.pid ; bundle exec rails server -p 3000 -b '0.0.0.0'"
+    volumes:
+      - .:/CDSI_example
+    environment:
+      LDAP_PASSWORD: "password"
+    ports:
+      - "80:3000"
+    depends_on:
+      - db
+      - ldap
+  ldap:
+    image: osixia/openldap:1.1.6
+    container_name: openldap
+    environment:
+      LDAP_TLS: 'false'
+      LDAP_ORGANISATION: "Northwestern"
+      LDAP_DOMAIN: "northwestern.edu"
+      LDAP_BASE_DN: "dc=northwestern,dc=edu"
+      LDAP_ADMIN_PASSWORD: "password"
+    volumes:
+      - "./config/ldap/db:/var/lib/ldap"
+      - "./config/ldap/slapd:/etc/ldap/slapd.d"
+      - "./add_to_ldap:/data"

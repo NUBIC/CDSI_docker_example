@@ -1,0 +1,33 @@
+# AUTO-GENERATED FILE - DO NOT EDIT!! Use ldapmodify.
+# CRC32 77df92bc
+dn: olcDatabase={1}hdb
+objectClass: olcDatabaseConfig
+objectClass: olcHdbConfig
+olcDatabase: {1}hdb
+olcDbDirectory: /var/lib/ldap
+olcSuffix: dc=northwestern,dc=edu
+olcLastMod: TRUE
+olcRootDN: cn=admin,dc=northwestern,dc=edu
+olcRootPW:: e1NTSEF9TXhzZFBOZS9sZ2RKSEVrOHl2RU5kNjk5cDkyOUNoUk4=
+olcDbCheckpoint: 512 30
+olcDbConfig: {0}set_cachesize 0 2097152 0
+olcDbConfig: {1}set_lk_max_objects 1500
+olcDbConfig: {2}set_lk_max_locks 1500
+olcDbConfig: {3}set_lk_max_lockers 1500
+structuralObjectClass: olcHdbConfig
+entryUUID: 3cb676e8-77e5-1037-841a-09d0858e24c8
+creatorsName: cn=admin,cn=config
+createTimestamp: 20171218021644Z
+olcAccess: {0}to attrs=userPassword,shadowLastChange by self write by dn="cn
+ =admin,dc=northwestern,dc=edu" write by anonymous auth by * none
+olcAccess: {1}to * by self write by dn="cn=admin,dc=northwestern,dc=edu" wri
+ te by * none
+olcDbIndex: uid eq
+olcDbIndex: mail eq
+olcDbIndex: memberOf eq
+olcDbIndex: entryCSN eq
+olcDbIndex: entryUUID eq
+olcDbIndex: objectClass eq
+entryCSN: 20171218021645.849726Z#000000#000#000000
+modifiersName: gidNumber=0+uidNumber=0,cn=peercred,cn=external,cn=auth
+modifyTimestamp: 20171218021645Z

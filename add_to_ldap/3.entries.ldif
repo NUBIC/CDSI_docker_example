@@ -1,0 +1,46 @@
+# test_user, People, northwestern.edu
+dn: uid=test_user, ou=People,dc=northwestern,dc=edu
+ou: People
+postalAddress: RUBLOFF 750 N Lake Shore Dr$11th Floor$CH
+nuIdTag: test_user
+mail: test_user@northwestern.edu
+employeeNumber: 1234567
+displayName: Test User
+sn: Test
+givenName: User
+uidNumber: 12345
+uid: test_user
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: nuperson
+cn: test_user
+cn: test,user
+nuAllGivenNameSearch: user
+nuAllSnSearch: test
+title: Random person
+userPassword: {SSHA}4r/othUH4aZcXUWyMjxvDQljRNfj5LR/
+
+dn: uid=gmh219, ou=People,dc=northwestern,dc=edu
+ou: People
+postalAddress: RUBLOFF 750 N Lake Shore Dr$11th Floor$CH
+nuIdTag: gmh219
+mail: gmh219@northwestern.edu
+employeeNumber: 1234568
+displayName: Gary Holtz
+sn: Gary
+givenName: H
+uidNumber: 12346
+uid: gmh219
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: nuperson
+cn: gmh219
+cn: gary,h
+nuAllGivenNameSearch: user
+nuAllSnSearch: test
+title: Developer
+userPassword: {SSHA}4r/othUH4aZcXUWyMjxvDQljRNfj5LR/

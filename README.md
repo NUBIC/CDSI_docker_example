@@ -11,5 +11,5 @@ To run:
 4. The default user password is `blahblah`, to generate a new one type:
   * `docker exec -it openldap bash`
   * `sldappasswd`
-5. To run tests locally, make sure you have something like this in your `.bashrc` or zsh/fish equivalent
+5. To run tests locally, make sure you have something like this in your `.bashrc`/`.zshrc`/fish shell equivalent
   * `export MY_APP_DATABASE_URL="postgres://postgres@localhost/cdsi_example_dev"`

@@ -27,4 +27,6 @@
 .byebug_history
 
 # Ignore master key for decrypting credentials and more.
-/config/master.key
+# /config/master.key
+# Including this since it's only a sample project
+config/ldap/*

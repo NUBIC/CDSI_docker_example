@@ -8,7 +8,7 @@ To run:
 	* `docker exec openldap ldapadd -x -D "cn=admin,dc=northwestern,dc=edu" -x -w 'password' -f /data/1.nu.ldif`
 	* `docker exec openldap ldapadd -Q -Y EXTERNAL -H ldapi:/// -f /data/2.schema.ldif`
 	* `docker exec openldap ldapadd -x -D "cn=admin,dc=northwestern,dc=edu" -x -w 'password' -f /data/3.entries.ldif`
-4. The default user password is `blahblah`, to generate a new one type:
+4. The default user password is `password`, to generate a new one type:
   * `docker exec -it openldap bash`
   * `sldappasswd`
 5. To run tests locally, make sure you have something like this in your `.bashrc`/`.zshrc`/fish shell equivalent
